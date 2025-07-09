@@ -1,6 +1,6 @@
 # 🎨 Abdo's Custom Terminal Configuration
 
-A beautiful and functional terminal setup featuring custom navigation, enhanced file listing, and fun commands.
+A beautiful and functional terminal setup featuring custom navigation, enhanced file listing, and fun commands it only support debain biased system and arch based and mac os 
 
 ## ✨ Features
 
