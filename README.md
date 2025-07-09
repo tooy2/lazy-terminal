@@ -104,11 +104,6 @@ welcome
 ```
 Displays "Welcome [username]" in big rainbow text.
 
-#### `arch-logo` - Arch Linux Logo
-```bash
-arch-logo
-```
-Shows "Arch Linux" in big rainbow ASCII art.
 
 #### `random-cow` - Rainbow Fortune Cow
 ```bash
