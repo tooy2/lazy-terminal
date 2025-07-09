@@ -11,16 +11,181 @@ A beautiful and functional terminal setup featuring custom navigation, enhanced 
 - **⚡ Productivity Aliases** - Quick shortcuts for common tasks
 - **🔧 Smart Fallbacks** - Works even without optional dependencies
 
-## 🎯 Quick Commands
+## 📋 Detailed Commands & Aliases
+
+This section provides an extensive list of custom commands and aliases available in this terminal configuration.
+
+### 📁 Enhanced Directory Navigation
+
+#### `cdd` - Display Numbered Directories
+Shows all directories in the current folder with numbers for easy navigation.
+```bash
+cdd
+```
+**Output:**
+```
+Available directories:
+1. 📁 Documents
+2. 📁 Downloads  
+3. 📁 Pictures
+
+Usage: cd <number> to change to that directory
+```
+
+#### `cd <number>` - Navigate by Number
+Enhanced `cd` command that accepts directory numbers from `cdd` output.
+```bash
+cd 3          # Changes to the 3rd directory
+cd ~/Documents # Still works normally
+```
+
+### 📋 Enhanced File Listing (with eza)
+
+#### `ls` - Basic List with Icons
+```bash
+ls
+```
+Shows files and folders with colorful icons.
+
+#### `ll` - Long Format with Details
+```bash
+ll
+```
+Long listing format with icons, headers, and git status information.
+
+#### `la` - All Files (including hidden)
+```bash
+la
+```
+Shows all files including hidden ones in long format with icons.
+
+#### `lt` - Tree View
+```bash
+lt
+```
+Displays directory structure as a tree (2 levels deep) with icons.
+
+#### `lta` - Tree View with Hidden Files
+```bash
+lta
+```
+Tree view including hidden files and directories.
+
+### 🎨 Fun & Visual Commands
+
+#### `matrix` - Matrix Digital Rain
+```bash
+matrix
+```
+Displays the famous Matrix digital rain effect in your terminal.
+
+#### `fortune-cow` - Random Quote with Cow
+```bash
+fortune-cow
+```
+Shows a random quote or fortune with ASCII cow art.
+
+#### `big-text` - ASCII Art Text
+```bash
+big-text "Your Text Here"
+```
+Converts text into large ASCII art letters.
+
+#### `rainbow` - Rainbow Text
+```bash
+rainbow
+echo "Hello World" | rainbow
+```
+Makes any text appear in rainbow colors.
+
+#### `welcome` - Welcome Message
+```bash
+welcome
+```
+Displays "Welcome [username]" in big rainbow text.
+
+#### `arch-logo` - Arch Linux Logo
+```bash
+arch-logo
+```
+Shows "Arch Linux" in big rainbow ASCII art.
+
+#### `random-cow` - Rainbow Fortune Cow
+```bash
+random-cow
+```
+Combines fortune + cowsay + rainbow colors for maximum fun.
+
+#### `sysinfo` - Stylized System Info
+```bash
+sysinfo
+```
+Shows "System Info" in big rainbow text followed by detailed system information.
+
+### 🔧 Git Aliases (Oh My Zsh)
+
+This configuration includes extensive git aliases from Oh My Zsh. Here are some key ones:
+
+#### Basic Git Commands
+- `g` - `git`
+- `gst` - `git status`
+- `ga` - `git add`
+- `gaa` - `git add --all`
+- `gc` - `git commit --verbose`
+- `gca` - `git commit --verbose --all`
+- `gp` - `git push`
+- `gl` - `git pull`
+
+#### Git Branches
+- `gb` - `git branch`
+- `gco` - `git checkout`
+- `gcb` - `git checkout -b`
+- `gm` - `git merge`
+
+#### Git Logs
+- `glog` - `git log --oneline --decorate --graph`
+- `glola` - `git log --graph --pretty --all`
+- `glo` - `git log --oneline --decorate`
+
+#### Git Diff
+- `gd` - `git diff`
+- `gdca` - `git diff --cached`
+- `gds` - `git diff --staged`
+
+## 🎯 Usage Examples
 
 ```bash
-cdd           # List directories with numbers
-cd 1          # Change to directory #1
-matrix        # Matrix rain effect
-welcome       # Welcome message with ASCII art
-sysinfo       # Stylized system information
-random-cow    # Rainbow cow with fortune
+# Navigate quickly
+cdd              # See numbered directories
+cd 2             # Go to 2nd directory
+
+# Beautiful file listings
+lt               # Tree view
+ll               # Detailed list
+la               # All files
+
+# Fun commands
+welcome          # Greeting
+arch-logo        # Show Arch logo
+sysinfo          # System information
+matrix           # Matrix effect
+random-cow       # Fun quote
+
+# Git workflow
+gst              # Check status
+ga .             # Add all files
+gc "message"     # Commit
+gp               # Push
 ```
+
+## 🎨 Visual Features
+
+- **Icons**: All file listings show appropriate icons
+- **Colors**: Syntax highlighting and colored output
+- **Git Integration**: Git status in file listings
+- **Tree Views**: Visual directory structure
+- **Rainbow Text**: Fun colorful output
+- **ASCII Art**: Big text and cow art
 
 ## 📦 What's Included
 
@@ -68,6 +233,22 @@ The configuration is highly customizable. You can:
 - Add new plugins to the `plugins` array
 - Change the theme by modifying `ZSH_THEME`
 - Add your own functions and aliases
+
+## 📝 Configuration Location
+
+All custom commands are defined in `~/.zshrc`. The main sections are:
+
+1. **Eza aliases** (lines 115-122)
+2. **Custom cd function** (lines 124-150)
+3. **Directory listing function** (lines 152-169)
+4. **Fun commands** (lines 171-184)
+
+The configuration includes:
+- Enhanced file listing with eza
+- Custom directory navigation
+- Fun visual commands
+- Git aliases from Oh My Zsh
+- Zsh plugins for better experience
 
 ## 💡 Tips
 
